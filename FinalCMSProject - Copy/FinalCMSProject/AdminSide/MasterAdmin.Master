@@ -1,0 +1,230 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterAdmin.master.cs" Inherits="TempelateHandling.AdminSide.MasterAdmin" %>
+<%@ page Language="C#" %>
+<% string  %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Startmin - Bootstrap Admin Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="Admin_Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+
+
+    <!-- MetisMenu CSS -->
+
+    <link href="Admin_Bootstrap/css/metisMenu.min.css" rel="stylesheet" />
+
+    <!-- Timeline CSS -->
+
+    <link href="Admin_Bootstrap/css/timeline.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+
+    <link href="Admin_Bootstrap/css/startmin.css" rel="stylesheet" />
+
+    <!-- Morris Charts CSS -->
+
+    <link href="Admin_Bootstrap/css/morris.css" rel="stylesheet" />
+
+    <!-- Custom Fonts -->
+
+    <link href="Admin_Bootstrap/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+   
+</head>
+<body>
+    
+    <form id="form1" runat="server">
+         <asp:ScriptManager runat="server"></asp:ScriptManager>
+        <div class=" container">
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="AdminHome.aspx"><i class="fa fa-home fa-fw"></i>Home </a>
+                </div>
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+
+
+                <ul class="nav navbar-right navbar-top-links">
+                   
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-user fa-fw"></i>
+                            <asp:Label ID="lblUserName" runat="server" Text=""></asp:Label> <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="SignUp.aspx"><i class="fa fa-user fa-fw"></i>Sign Up</a>
+                            </li>
+
+                            <li class="divider"></li>
+                           <li> <a href="Logout.aspx"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /.navbar-top-links -->
+
+        </div>
+        <div class="container">
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </div>
+
+    </form>
+
+  <%--  <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="copy">
+                        <h1 style="margin-top: 0px; font-size: 60px; text-align: center; line-height: 1; margin-bottom: 25px; font-family: 'Brush Script MT'; color: #5f5e4e;">Cafe Management PUGC</h1>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12" style="margin-top: 20px">
+                        <div class="col-lg-8 col-lg-push-4 col-md-10 col-md-push-4 col-sm-push-4">
+                            <table>
+                                <tr>
+                                    <td class="text-center" style="margin-right: 20px;"><a href="https://www.facebook.com/">
+                                        <img src="client_images/fb.png" class="img-circle img-responsive" />
+                                    </a></td>
+                                    <td class="text-center" style="padding: 10px; margin-top: 0px;">
+                                        <a href="https://www.linkedin.com/uas/login">
+                                            <img src="client_images/linkedin22.png" class="img-circle img-responsive" />
+                                        </a>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="https://www.instagram.com/?hl=en">
+                                            <img src="client_images/Insta11.jpg" class="img-circle img-responsive" />
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </footer>>--%>
+
+        <%--    <footer class="container-fluid" style="background-color: silver;">
+        <div>
+            <div class="row" >
+                <div class="col-lg-12">
+                    <div class="copy">
+                        <h1 style="margin-top: 10px; font-size: 60px; text-align: center; line-height: 1; margin-bottom: 25px; font-family: 'Brush Script MT'; color: black;">Cafe Management PUGC</h1>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12" style="margin-top: 20px">
+                    <div class="col-lg-8 col-lg-push-4 col-md-10 col-md-push-4 col-sm-push-4">
+                        <table>
+                            <tr>
+                                <td class="text-center" style="margin-right: 20px;"><a href="https://www.facebook.com/">
+                                    <img src="../Imges/ItemPicture/fb.png" class="img-circle img-responsive" />
+                                </a></td>
+                                <td class="text-center" style="padding: 10px; margin-top: 0px;">
+                                    <a href="https://www.linkedin.com/uas/login">
+                                        <img src="../Imges/ItemPicture/linkedin22.png" class="img-circle img-responsive" />
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <a href="https://www.instagram.com/?hl=en">
+                                        <img src="../Imges/ItemPicture/Insta11.jpg" class="img-circle img-responsive" />
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>kam
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer--%>>
+
+        <footer>
+              <div class="container-fluid" style="margin-top:490px; background-color:silver;">
+                  <div class="row">
+                      <div class="col-lg-12">
+                          <div class="copy" >
+                            <h1 style="margin-top: 0px; font-size: 60px;text-align: center;
+                                  line-height: 1;margin-bottom: 25px;
+                                          font-family: 'Brush Script MT'; color:#5f5e4e;"> Cafe Management PUGC</h1>
+                   
+                    </div>
+
+                      </div>
+                  
+                       <div class="row">
+                           <div class="col-lg-12" style="margin-top:20px">
+                                  <div class="col-lg-8 col-lg-push-4 col-md-10 col-md-push-4 col-sm-push-4">
+                                      <table>
+                                          <tr>
+                                              <td class="text-center" style="margin-right:20px;"> <a href="https://www.facebook.com/"> <img src="../AdminPicture/fb.png" class="img-circle img-responsive"/>  </a></td>
+                                              <td class="text-center" style="padding:10px; margin-top:0px;">
+                                            <a href="https://www.linkedin.com/uas/login">
+                                                <img src="../AdminPicture/linkedin22.png" class="img-circle img-responsive" /> 
+                                                  </a>
+                                              </td>
+                                              <td class="text-center">
+                                                      <a href="https://www.instagram.com/?hl=en">
+                                                             <img src="../AdminPicture/Insta11.jpg" class="img-circle img-responsive" /> 
+                                                             </a>
+                                              </td>
+                                          </tr>
+                                      </table> 
+
+                                  </div>
+                        
+                           </div>
+                       </div>
+                  </div>
+              </div>
+          </footer>
+
+
+    <!-- jQuery -->
+        <script src="Admin_Bootstrap/js/jquery.min.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="Admin_Bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- Metis Msssssenu Plugin JavaScript -->
+        <script src="Admin_Bootstrap/js/metisMenu.min.js"></script>
+
+        <%-- <!-- Morris Charts JavaScript -->
+        <script src="Admin_Bootstrap/js/raphael.min.js"></script>
+        <script src="Admin_Bootstrap/js/morris.min.js"></script>
+        <script src="Admin_Bootstrap/js/morris-data.js"></script>--%>
+        <!-- Custom Theme JavaScript -->
+        <script src="Admin_Bootstrap/js/startmin.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ClientSide.master.cs" Inherits="TempelateHandling.ClientSide" %>
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <script src="../js_client/jquery.js"></script>
+    <script src="../js_client/jquery-migrate-1.1.1.js"></script>
+    <script src="../js_client/jquery.equalheights.js"></script>
+    <script src="../js_client/jquery.ui.totop.js"></script>
+    <script src="../js_client/jquery.easing.1.3.js"></script>
+    <script src="../js_client/jquery.tabs.min.js"></script>
+    <script src="../js_client/touchTouch.jquery.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&amp;sensor=false"></script>
+    <!-- CSS -->
+    <link href="../bootstrap.min.css" rel="stylesheet" />
+    <%-- <link href="Client_css/form.css" rel="stylesheet" />
+    <link href="Client_css/reset.css" rel="stylesheet" />
+    <link href="Client_css/grid.css" rel="stylesheet" />
+    <link href="Client_css/touchTouch.css" rel="stylesheet" />--%>
+    <link href="Client_css/stylesheet.css" rel="stylesheet" />
+    <link href="Client_css/font-awesome.css" rel="stylesheet" />
+    <link href="Client_css/menu.css" rel="stylesheet" />
+
+
+
+    <script>
+        $(document).ready(function () {
+            $(".block1").mouseover(function () {
+                $(this).addClass("blur");
+            });
+            $(".block1").mouseout(function () {
+                $(this).removeClass("blur");
+            });
+            $().UItoTop({ easingType: 'easeOutQuart' });
+        })
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+            $('.gallery a.gal').touchTouch();
+
+        })
+    </script>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="page1">
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <!--==============================header=================================-->
+        <header>
+            <div class="container_12">
+                <div class="grid_12" style="margin-bottom: 100px">
+                    <%--     <img src="client_images/gold-Foil-Social-Media-Icons.png" style="width:65%; background-color:#d7d7b1"/>--%>
+                    <%--<div class="socials">
+      <a href="#"></a>
+      <a href="#"></a>
+      <a href="#"></a>
+      <a href="#" class="last"></a>
+    </div>--%>
+                    <h1 style="margin-top: 0px; font-size: 60px; text-align: center; line-height: 1; margin-bottom: 25px; font-family: 'Brush Script MT'; color: #5f5e4e;">Cafe Management PUGC  </h1>
+                    <%---    <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">For Admin Use</asp:LinkButton>&nbsp;&nbsp;---%>
+                    <%--<asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">For Admin</asp:LinkButton>--%>
+                    <div class="menu_block">
+
+
+                        <nav id="bt-menu" class="bt-menu">
+                            <a href="#" class="bt-menu-trigger"><span>Menu</span></a>
+                            <ul>
+                                <li class="current bt-icon "><a href="clientHome.aspx">Home</a></li>
+                                <li class="bt-icon"><a href="About Us.aspx">About</a></li>
+                                <li class="bt-icon"><a href="itemPage1.aspx">Menu</a></li>
+                                <li class="bt-icon"><a href="View_Cart.aspx">View Cart</a></li>
+                                <%if (Session["User"] == null)
+                                    { %>
+                                <li class="bt-icon"><a href="../AdminSide/LoginAdmin.aspx">Login</a></li>
+                                <% }
+                                    else
+                                    { %>
+                                <li class="bt-icon"><a href="../AdminSide/Logout.aspx">Logout</a></li>
+                                <% } %>
+
+                                <li class="bt-icon"><a href="index-5.html">Contacts</a></li>
+
+
+                            </ul>
+                        </nav>
+
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </header>
+
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <!--==============================footer=================================-->
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copy">
+                            <h1 style="margin-top: 0px; font-size: 60px; text-align: center; line-height: 1; margin-bottom: 25px; font-family: 'Brush Script MT'; color: #5f5e4e;">Cafe Management PUGC</h1>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12" style="margin-top: 20px">
+                            <div class="col-lg-8 col-lg-push-4 col-md-10 col-md-push-4 col-sm-push-4">
+                                <table>
+                                    <tr>
+                                        <td class="text-center" style="margin-right: 20px;"><a href="https://www.facebook.com/">
+                                            <img src="client_images/fb.png" class="img-circle img-responsive" />
+                                        </a></td>
+                                        <td class="text-center" style="padding: 10px; margin-top: 0px;">
+                                            <a href="https://www.linkedin.com/uas/login">
+                                                <img src="client_images/linkedin22.png" class="img-circle img-responsive" />
+                                            </a>
+                                        </td>
+                                        <td class="text-center">
+                                            <a href="https://www.instagram.com/?hl=en">
+                                                <img src="client_images/Insta11.jpg" class="img-circle img-responsive" />
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            $(document).ready(function () {
+                $(".bt-menu-trigger").toggle(
+                    function () {
+                        $('.bt-menu').addClass('bt-menu-open');
+                    },
+                    function () {
+                        $('.bt-menu').removeClass('bt-menu-open');
+                    }
+                );
+            })
+        </script>
+    </form>
+</body>
+
+</html>
